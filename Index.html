@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台中景點一日遊｜超級可愛卡哇伊風</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #fff6fb;
+        font-family: "Noto Sans TC", sans-serif;
+        color: #6b4c4c;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    /* 🎀 HERO 區：已移除背景圖片，保留粉色漸層與可愛裝飾 */
+    .hero {
+        height: 50vh;
+        background: linear-gradient(135deg, #ffd7ec, #ffb8db 40%, #ffcdea);
+        border-radius: 0 0 50px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* 🌸 可愛雲朵飄浮 */
+    .cloud {
+        position: absolute;
+        font-size: 55px;
+        opacity: 0.45;
+        animation: float 6s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-18px); }
+    }
+
+    .cloud-left { left: 10%; top: 15%; }
+    .cloud-right { right: 12%; top: 25%; }
+
+    /* ✨ 小貼圖漂浮 */
+    .hero::after {
+        content: "✨💕🌸";
+        position: absolute;
+        bottom: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 25px;
+        letter-spacing: 12px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+        margin: 0;
+    }
+    .hero p {
+        margin-top: 10px;
+        font-size: 1.15rem;
+    }
+
+    /* 主容器 */
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 40px auto;
+    }
+
+    /* 🎀 超可愛卡片 */
+    .card {
+        background: #ffffffee;
+        border-radius: 25px;
+        padding: 22px;
+        margin-bottom: 24px;
+        border: 2px solid #ffe1f0;
+        box-shadow: 0 6px 18px rgba(255,150,200,0.28);
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card::after {
+        content: "🌸";
+        position: absolute;
+        right: 18px;
+        top: 16px;
+        font-size: 1.4rem;
+        opacity: 0.9;
+        transition: .3s;
+    }
+
+    .card:hover::after {
+        transform: rotate(20deg) scale(1.15);
+        content: "💗";
+    }
+
+    .card:hover {
+        transform: translateY(-4px) scale(1.02);
+        border-color: #ff8fc5;
+        box-shadow: 0 12px 25px rgba(255,150,200,0.45);
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #ff64a3;
+    }
+
+    .card-content {
+        margin-top: 12px;
+        display: none;
+        font-size: 0.98rem;
+        color: #7e6666;
+    }
+
+    /* 🍬 StoryMap 区 */
+    .storymap-section {
+        margin-top: 70px;
+        text-align: center;
+    }
+
+    .storymap-section h2 {
+        font-size: 1.9rem;
+        color: #ff7fb7;
+        text-shadow: 0 2px 6px rgba(255,170,200,0.4);
+        margin-bottom: 20px;
+    }
+
+    .story-frame {
+        padding: 18px;
+        border-radius: 30px;
+        background: #ffe3f3;
+        border: 4px dotted #ffb4d7;
+        box-shadow: 0 10px 25px rgba(255,150,200,0.35);
+        position: relative;
+    }
+
+    .story-frame::before {
+        content: "🐰";
+        position: absolute;
+        top: -18px;
+        left: 20px;
+        font-size: 2rem;
+    }
+    .story-frame::after {
+        content: "🎀";
+        position: absolute;
+        top: -20px;
+        right: 18px;
+        font-size: 1.7rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 800px;
+        border: none;
+        border-radius: 20px;
+    }
+
+    footer {
+        text-align: center;
+        color: #b3879b;
+        padding: 50px 0;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="cloud cloud-left">☁️</div>
+    <div class="cloud cloud-right">☁️</div>
+
+    <h1>台中景點一日遊</h1>
+    <p>旅游 × 超級可愛StoryMap導覽 × 自由</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <div class="card-title">台中國家歌劇院</div>
+        <div class="card-content">
+            <p>由伊東豊雄設計的洞窟曲牆建築，是台中最像夢幻世界的文化地標！</p>
+            <p><strong>地址：</strong>台中市西屯區惠來路二段101號</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">臺中州廳</div>
+        <div class="card-content">
+            <p>復古感十足，周邊又是文青小天地，隨便拍都可愛。</p>
+            <p><strong>地址：</strong>台中市西區民權路99號</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">審計新村</div>
+        <div class="card-content">
+            <p>文創市集＋美食甜點＝台中最青春可愛的熱門景點！</p>
+            <p><strong>地址：</strong>台中市西區民生路368巷</p>
+        </div>
+    </div>
+</div>
+
+<div class="storymap-section container">
+    <h2>台中一日遊 StoryMap</h2>
+    <div class="story-frame">
+        <iframe src="https://uploads.knightlab.com/storymapjs/df01161b8f604a76215dfc3e6d6a9662/hm/index.html"></iframe>
+    </div>
+</div>
+
+<footer>
+    © 大傳三A 鄭惠璟 🌸🐰🎀
+</footer>
+
+<script>
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            const content = card.querySelector(".card-content");
+            content.style.display =
+                content.style.display === "block" ? "none" : "block";
+        });
+    });
+</script>
+
+</body>
+</html>
